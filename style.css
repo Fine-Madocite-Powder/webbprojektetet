@@ -1,0 +1,13 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+footer {
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color:darkred;
+    width:100%;
+}

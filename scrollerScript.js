@@ -1,9 +1,12 @@
-const scrollToTop = document.getElementById("inuse");
+const homeNavItem = document.getElementById("inuse");
 const content = document.getElementById("content");
 
 
-scrollToTop.addEventListener("click", (event) => {
+homeNavItem.addEventListener("click", (event) => {
     event.preventDefault()
 
-    content.scrollIntoView({ behavior: "smooth"})
+    content.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
 })

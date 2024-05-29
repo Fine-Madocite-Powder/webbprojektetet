@@ -1,5 +1,5 @@
 const homeNavItem = document.getElementById("inuse");
-const content = document.getElementById("content");
+const content = document.getElementById("search-results");
 
 
 homeNavItem.addEventListener("click", (event) => {

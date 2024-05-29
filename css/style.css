@@ -4,12 +4,17 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
+@media (min-width: 601px) {
+    body {
+        font-size:large;
+    }
+}
 
 header {
     position: fixed;
     top: 0;
     height:10vh;
-    width:100%;
+    width:100vw;
 
     display: flex;
     justify-content: space-between;
@@ -81,43 +86,54 @@ main {
     border: 1px solid #ccc;
     padding: 2vw;
     margin-top: 5vh;
-    height: 70vh;
+    width: 60vw;
+    height: 60vh;
 
     overflow-y: auto;
 
     display: flex;
     flex-wrap: wrap;
 
+    .content {
+        position: relative;
+        height: 100%;
+    }
+    
+    .image {
+        height: 35vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    img {
+        width: 100%;
+    }
+
     .content-section {
         flex: 0 0 50%;
         box-sizing: border-box;
         height: 35vh;
 
-        background-color: darkred;
-
-
+        overflow:hidden;
     }
-}
 
-#positionToBottom {
-    position:fixed;
-    bottom:0;
-    width:100%;
+    .text {
+        padding: 5px;
+        background-color: #FFF;
+    }
 }
 
 footer {
+    position:fixed;
+    bottom:0;
+    width:100%;
+
     background-color: #333;
-    color: white;
-    
-    div {
-        display: flex;
-        justify-content:space-around;
-        align-items: center;
-        text-align: center;
-    }
-    li {
-        list-style-type: none;
-    }
+    padding: 2px;
+
+    display: flex;
+
+    justify-content: center;
 }
 
 table {
@@ -128,14 +144,19 @@ table {
     table, th, td {
         border: 1px solid black;
         color: white;
-    };
+    }
     th, td {
         background-color: #222;
         padding: 10px;
-    };
+    }
     th {
         text-align: center;
     };
+}
+@media (max-width: 600px) {
+    table th, table td {
+        padding: 3px;
+    }
 }
 
 .greybox {
